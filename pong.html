@@ -5,7 +5,7 @@
 		<script> 
 			function start() {
 				sjs.open("target", 500, 400);
-				var speed = 9;
+				var speed = 3;
 				var distance = 50;
 				//Background
 				var line1 = new sjs.Image("pong-ball.png");
@@ -214,7 +214,7 @@
 				ball.setSize(15,15);
 				ball.center();
 				ball.friction = 0;
-				ball.accel = 0.05;
+				ball.accel = 0.01;
 				ball.bounce();
 				ball.pushRight(speed);
 				ball.pushUp(2);
@@ -330,7 +330,7 @@
 					if(score2 > 5) {
 					window.location = "gameover2.html";
 					} else { 
-						speed = 9;
+						speed = 3;
 						ball.center();
 						if(score2 > 4) {
 							four.hide()
@@ -363,7 +363,7 @@
 					if(score1 > 5) {
 					window.location = "gameover1.html";
 					} else { 
-						speed = 9;
+						speed = 3;
 						ball.center();
 						if(score1 > 4) {
 							four2.hide()
