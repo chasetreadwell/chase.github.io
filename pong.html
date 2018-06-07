@@ -214,7 +214,9 @@
 				ball.setSize(15,15);
 				ball.center();
 				ball.friction = 0;
-				ball.accel = 0.01;
+				setInterval(function() {
+					speed = speed * 1.0001
+				}, 1)
 				ball.bounce();
 				ball.pushRight();
 				ball.pushUp();
