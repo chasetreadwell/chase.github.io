@@ -317,11 +317,11 @@
 					paddle1.pushDown()
 				})
 				sjs.onHit("ball", "paddle1", function(ball, paddle) {
-					bounce(ball, paddle1);
+					sjs.bounceOff(ball, paddle1);
 					speed = speed*1.1;
 				})
 				sjs.onHit("ball", "paddle2", function(ball, paddle) {
-					bounce(ball, paddle2);
+					sjs.bounceOff(ball, paddle2);
 					speed = speed*1.1;
 				})
 				sjs.onHit("ball","left_screen", function() {
