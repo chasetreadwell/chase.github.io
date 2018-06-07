@@ -317,11 +317,15 @@
 					paddle1.pushDown()
 				})
 				sjs.onHit("ball", "paddle1", function(ball, paddle) {
-					sjs.bounceOff(ball, paddle)
+					function OnCollisionEnter(other : Collision) {
+   						rigidbody.AddForce(Random.insideUnitCircle * 10, ForceMode.Impulse); // or some other multiplier
+ 					}
 					speed = speed*1.1;
 				})
 				sjs.onHit("ball", "paddle2", function(ball, paddle) {
-					sjs.bounceOff(ball, paddle)
+					function OnCollisionEnter(other : Collision) {
+						rigidbody.AddForce(Random.insideUnitCircle * 10, ForceMode.Impulse); // or some other multiplier
+					}
 					speed = speed*1.1;
 				})
 				sjs.onHit("ball","left_screen", function() {
