@@ -218,8 +218,8 @@
 					speed = speed * 1.0001
 				}, 1)
 				ball.bounce();
-				ball.pushRight();
-				ball.pushUp();
+				ball.pushRight(speed);
+				ball.pushUp(speed);
 				//Paddle One
 				var paddle1 = new sjs.Image("pong-ball.png");
 				paddle1.type = "paddle1";
