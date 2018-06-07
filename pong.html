@@ -1,0 +1,404 @@
+<html>
+	<head>
+		<title> Pong </title> 
+		<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script> 
+		<script> 
+			function start() {
+				sjs.open("target", 500, 400);
+				var speed = 9;
+				var distance = 50;
+				//Background
+				var line1 = new sjs.Image("Images/pong-ball.png");
+				line1.type="line"
+				line1.setSize(2, 5);
+				line1.centerH();
+				line1.offset(0, 2.5);
+				var line2 = new sjs.Image("Images/pong-ball.png");
+				line2.type="line"
+				line2.setSize(2, 5);
+				line2.centerH();
+				line2.offset(0, 12.5);
+				var line3 = new sjs.Image("Images/pong-ball.png");
+				line3.type="line"
+				line3.setSize(2, 5);
+				line3.centerH();
+				line3.offset(0, 22.5);
+				var line4 = new sjs.Image("Images/pong-ball.png");
+				line4.type="line"
+				line4.setSize(2, 5);
+				line4.centerH();
+				line4.offset(0, 32.5);
+				var line5 = new sjs.Image("Images/pong-ball.png");
+				line5.type="line"
+				line5.setSize(2, 5);
+				line5.centerH();
+				line5.offset(0, 42.5);
+				var line6 = new sjs.Image("Images/pong-ball.png");
+				line6.type="line"
+				line6.setSize(2, 5);
+				line6.centerH();
+				line6.offset(0, 52.5);
+				var line7 = new sjs.Image("Images/pong-ball.png");
+				line7.type="line"
+				line7.setSize(2, 5);
+				line7.centerH();
+				line7.offset(0, 62.5);
+				var line8 = new sjs.Image("Images/pong-ball.png");
+				line8.type="line"
+				line8.setSize(2, 5);
+				line8.centerH();
+				line8.offset(0, 72.5);
+				var line9 = new sjs.Image("Images/pong-ball.png");
+				line9.type="line"
+				line9.setSize(2, 5);
+				line9.centerH();
+				line9.offset(0, 82.5);
+				var line10 = new sjs.Image("Images/pong-ball.png");
+				line10.type="line"
+				line10.setSize(2, 5);
+				line10.centerH();
+				line10.offset(0, 92.5);
+				var line11 = new sjs.Image("Images/pong-ball.png");
+				line11.type="line"
+				line11.setSize(2, 5);
+				line11.centerH();
+				line11.offset(0, 102.5);
+				var line12 = new sjs.Image("Images/pong-ball.png");
+				line12.type="line"
+				line12.setSize(2, 5);
+				line12.centerH();
+				line12.offset(0, 112.5);
+				var line13 = new sjs.Image("Images/pong-ball.png");
+				line13.type="line"
+				line13.setSize(2, 5);
+				line13.centerH();
+				line13.offset(0, 122.5);
+				var line14 = new sjs.Image("Images/pong-ball.png");
+				line14.type="line"
+				line14.setSize(2, 5);
+				line14.centerH();
+				line14.offset(0, 132.5);
+				var line15 = new sjs.Image("Images/pong-ball.png");
+				line15.type="line"
+				line15.setSize(2, 5);
+				line15.centerH();
+				line15.offset(0, 142.5);
+				var line16 = new sjs.Image("Images/pong-ball.png");
+				line16.type="line"
+				line16.setSize(2, 5);
+				line16.centerH();
+				line16.offset(0, 152.5);
+				var line17 = new sjs.Image("Images/pong-ball.png");
+				line17.type="line"
+				line17.setSize(2, 5);
+				line17.centerH();
+				line17.offset(0, 162.5);
+				var line18 = new sjs.Image("Images/pong-ball.png");
+				line18.type="line"
+				line18.setSize(2, 5);
+				line18.centerH();
+				line18.offset(0, 172.5);
+				var line19 = new sjs.Image("Images/pong-ball.png");
+				line19.type="line"
+				line19.setSize(2, 5);
+				line19.centerH();
+				line19.offset(0, 182.5);
+				var line20 = new sjs.Image("Images/pong-ball.png");
+				line20.type="line"
+				line20.setSize(2, 5);
+				line20.centerH();
+				line20.offset(0, 192.5);
+				var line21 = new sjs.Image("Images/pong-ball.png");
+				line21.type="line"
+				line21.setSize(2, 5);
+				line21.centerH();
+				line21.offset(0, 202.5);
+				var line22 = new sjs.Image("Images/pong-ball.png");
+				line22.type="line"
+				line22.setSize(2, 5);
+				line22.centerH();
+				line22.offset(0, 212.5);
+				var line23 = new sjs.Image("Images/pong-ball.png");
+				line23.type="line"
+				line23.setSize(2, 5);
+				line23.centerH();
+				line23.offset(0, 222.5);
+				var line24 = new sjs.Image("Images/pong-ball.png");
+				line24.type="line"
+				line24.setSize(2, 5);
+				line24.centerH();
+				line24.offset(0, 232.5);
+				var line25 = new sjs.Image("Images/pong-ball.png");
+				line25.type="line"
+				line25.setSize(2, 5);
+				line25.centerH();
+				line25.offset(0, 242.5);
+				var line26 = new sjs.Image("Images/pong-ball.png");
+				line26.type="line"
+				line26.setSize(2, 5);
+				line26.centerH();
+				line26.offset(0, 252.5);
+				var line27 = new sjs.Image("Images/pong-ball.png");
+				line27.type="line"
+				line27.setSize(2, 5);
+				line27.centerH();
+				line27.offset(0, 262.5);
+				var line28 = new sjs.Image("Images/pong-ball.png");
+				line28.type="line"
+				line28.setSize(2, 5);
+				line28.centerH();
+				line28.offset(0, 272.5);
+				var line29 = new sjs.Image("Images/pong-ball.png");
+				line29.type="line"
+				line29.setSize(2, 5);
+				line29.centerH();
+				line29.offset(0, 282.5);
+				var line30 = new sjs.Image("Images/pong-ball.png");
+				line30.type="line"
+				line30.setSize(2, 5);
+				line30.centerH();
+				line30.offset(0, 292.5);
+				var line31 = new sjs.Image("Images/pong-ball.png");
+				line31.type="line"
+				line31.setSize(2, 5);
+				line31.centerH();
+				line31.offset(0, 302.5);
+				var line32 = new sjs.Image("Images/pong-ball.png");
+				line32.type="line"
+				line32.setSize(2, 5);
+				line32.centerH();
+				line32.offset(0, 312.5);
+				var line33 = new sjs.Image("Images/pong-ball.png");
+				line33.type="line"
+				line33.setSize(2, 5);
+				line33.centerH();
+				line33.offset(0, 322.5);
+				var line34 = new sjs.Image("Images/pong-ball.png");
+				line34.type="line"
+				line34.setSize(2, 5);
+				line34.centerH();
+				line34.offset(0, 332.5);
+				var line35 = new sjs.Image("Images/pong-ball.png");
+				line35.type="line"
+				line35.setSize(2, 5);
+				line35.centerH();
+				line35.offset(0, 342.5);
+				var line36 = new sjs.Image("Images/pong-ball.png");
+				line36.type="line"
+				line36.setSize(2, 5);
+				line36.centerH();
+				line36.offset(0, 352.5);
+				var line37 = new sjs.Image("Images/pong-ball.png");
+				line37.type="line"
+				line37.setSize(2, 5);
+				line37.centerH();
+				line37.offset(0, 362.5);
+				var line38 = new sjs.Image("Images/pong-ball.png");
+				line38.type="line"
+				line38.setSize(2, 5);
+				line38.centerH();
+				line38.offset(0, 372.5);
+				var line39 = new sjs.Image("Images/pong-ball.png");
+				line39.type="line"
+				line39.setSize(2, 5);
+				line39.centerH();
+				line39.offset(0, 382.5);
+				var line40 = new sjs.Image("Images/pong-ball.png");
+				line40.type="line"
+				line40.setSize(2, 5);
+				line40.centerH();
+				line40.offset(0, 392.5);
+				//Ball goes here
+				var ball = new sjs.Image("Images/pong-ball.png");
+				ball.type = "ball";
+				ball.setSize(15,15);
+				ball.center();
+				ball.friction = 0;
+				ball.bounce();
+				ball.pushRight(speed);
+				ball.pushUp(2);
+				//Paddle One
+				var paddle1 = new sjs.Image("Images/pong-ball.png");
+				paddle1.type = "paddle1";
+				paddle1.centerV();
+				paddle1.setSize(20, 100);
+				paddle1.offset(20, -50)
+				//Paddle Two
+				var paddle2 = new sjs.Image("Images/pong-ball.png");
+				paddle2.type = "paddle2";
+				paddle2.centerV();
+				paddle2.setSize(20, 100);
+				paddle2.offset(460, -50);
+				//Score
+				var score1 = 0;
+				var score2 = 0;
+				var zero = new sjs.Image("Images/num0.png");
+				zero.type = "num"
+				zero.setSize(16, 32);
+				zero.centerH();
+				zero.offset(121, distance);
+				var one = new sjs.Image("Images/num1.png");
+				one.type = "num"
+				one.setSize(16, 32)
+				one.centerH()
+				one.offset(121, distance)
+				one.hide();
+				var two = new sjs.Image("Images/num2.png");
+				two.type = "num"
+				two.setSize(16, 32)
+				two.centerH()
+				two.offset(121, distance)
+				two.hide();
+				var three = new sjs.Image("Images/num3.png");
+				three.type = "num"
+				three.setSize(16, 32)
+				three.centerH()
+				three.offset(121, distance)
+				three.hide();
+				var four = new sjs.Image("Images/num4.png");
+				four.type = "num"
+				four.setSize(16, 32)
+				four.centerH()
+				four.offset(121, distance)
+				four.hide();
+				var five = new sjs.Image("Images/num5.png");
+				five.type = "num"
+				five.setSize(16, 32)
+				five.centerH()
+				five.offset(121, distance)
+				five.hide();
+				//New Score
+				var zero2 = new sjs.Image("Images/num0.png");
+				zero.type = "num"
+				zero2.setSize(16, 32)
+				zero2.centerH()
+				zero2.offset(-129, distance)
+				var one2 = new sjs.Image("Images/num1.png");
+				one2.type = "num"
+				one2.setSize(16, 32)
+				one2.centerH()
+				one2.offset(-129, distance)
+				one2.hide()
+				var two2 = new sjs.Image("Images/num2.png");
+				two2.type = "num"
+				two2.setSize(16, 32)
+				two2.centerH()
+				two2.offset(-129, distance)
+				two2.hide()
+				var three2 = new sjs.Image("Images/num3.png");
+				three2.type = "num"
+				three2.setSize(16, 32)
+				three2.centerH()
+				three2.offset(-129, distance)
+				three2.hide()
+				var four2 = new sjs.Image("Images/num4.png");
+				four2.type = "num"
+				four2.setSize(16, 32)
+				four2.centerH()
+				four2.offset(-129, distance)
+				four2.hide()
+				var five2 = new sjs.Image("Images/num5.png");
+				five2.type = "num"
+				five2.setSize(16, 32)
+				five2.centerH()
+				five2.offset(-129, distance)
+				five2.hide()
+				//Movement
+				sjs.keyDown(UP_KEY, function () {
+					paddle2.pushUp()
+				})
+				sjs.keyDown(W_KEY, function () {
+					paddle1.pushUp()
+				})
+				sjs.keyDown(DOWN_KEY, function () {
+					paddle2.pushDown()
+				})
+				sjs.keyDown(S_KEY, function () {
+					paddle1.pushDown()
+				})
+				sjs.onHit("ball", "paddle1", function(ball, paddle) {
+					sjs.bounceOff(ball, paddle)
+					speed = speed*1.1;
+				})
+				sjs.onHit("ball", "paddle2", function(ball, paddle) {
+					sjs.bounceOff(ball, paddle)
+					speed = speed*1.1;
+				})
+				sjs.onHit("ball","left_screen", function() {
+					score2 = score2 + 1;
+					if(score2 > 5) {
+					window.location = "gameover2.html";
+					} else { 
+						speed = 9;
+						ball.center();
+						if(score2 > 4) {
+							four.hide()
+							five.show()
+						} else { 
+							if(score2 > 3) {
+								four.show();
+								three.hide()
+							} else { 
+								if(score2 > 2) {
+									two.hide()
+									three.show()
+								} else { 
+									if(score2 > 1) {
+										two.show()
+										one.hide()
+									} else { 
+										if(score2 > 0) {
+											zero.hide()
+											one.show()
+										}
+									}
+								}
+							}
+						}
+					}
+				})
+				sjs.onHit("ball","right_screen", function() {
+					score1 = score1 + 1;
+					if(score1 > 5) {
+					window.location = "gameover1.html";
+					} else { 
+						speed = 9;
+						ball.center();
+						if(score1 > 4) {
+							four2.hide()
+							five2.show()
+						} else { 
+							if(score1 > 3) {
+								four2.show()
+								three2.hide()
+							} else { 
+								if(score1 > 2) {
+									two2.hide()
+									three2.show()
+								} else { 
+									if(score1 > 1) {
+										two2.show()
+										one2.hide()
+									} else { 
+										if(score1 > 0) {
+											zero2.hide()
+											one2.show()
+										}
+									}
+								}
+							}
+						}
+					}
+				})
+			} //End start
+		</script> 
+	</head> 
+	<body onload = "start()"> 
+		<h1>___________________________________________________________</h1> 
+		<div id="target" style="margin:auto;background:black;"></div> 
+		<audio controls autoplay>
+ 			<source src="Russian_music.mp3" type="audio/mpeg">
+ 			Your browser does not support the audio element.
+		</audio>
+	</body> 
+</html>
