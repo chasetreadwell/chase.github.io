@@ -223,17 +223,46 @@
 					ball.pushRight(0.0000000001*speed)
 				}, 1)
 				//Paddle One
-				var paddle1 = new sjs.Image("pong-ball.png");
-				paddle1.type = "paddle1";
-				paddle1.centerV();
-				paddle1.setSize(20, 100);
-				paddle1.offset(20, -50)
+				var paddle11 = new sjs.Image("pong-ball.png");
+				paddle11.type = "paddle11";
+				paddle11.centerV();
+				paddle11.setSize(20, 33);
+				paddle11.yMax(400);
+				paddle11.offset(20, -50)
+				
+				var paddle12 = new sjs.Image("pong-ball.png");
+				paddle12.type = "paddle12";
+				paddle12.centerV();
+				paddle12.setSize(20, 34);
+				paddle12.yMin(33);
+				paddle12.yMax(433);
+				paddle12.offset(20, -50)
+				
+				var paddle13 = new sjs.Image("pong-ball.png");
+				paddle13.type = "paddle13";
+				paddle13.centerV();
+				paddle13.setSize(20, 33);
+				paddle13.yMin(67);
+				paddle13.offset(20, -50)
 				//Paddle Two
-				var paddle2 = new sjs.Image("pong-ball.png");
-				paddle2.type = "paddle2";
-				paddle2.centerV();
-				paddle2.setSize(20, 100);
-				paddle2.offset(460, -50);
+				var paddle21 = new sjs.Image("pong-ball.png");
+				paddle21.type = "paddle21";
+				paddle21.centerV();
+				paddle21.setSize(20, 33);
+				paddle21.yMax();
+				paddle21.offset(460, -50);
+				
+				var paddle22 = new sjs.Image("pong-ball.png");
+				paddle22.type = "paddle21";
+				paddle22.centerV();
+				paddle22.setSize(20, 34);
+				paddle22.offset(460, -50);
+				
+				var paddle23 = new sjs.Image("pong-ball.png");
+				paddle23.type = "paddle21";
+				paddle23.centerV();
+				paddle23.setSize(20, 33);
+				paddle23.offset(460, -50);
 				//Score
 				var score1 = 0;
 				var score2 = 0;
@@ -310,23 +339,23 @@
 				five2.hide()
 				//Movement
 				sjs.keyDown(UP_KEY, function () {
-					paddle2.pushUp()
+					paddle21.pushUp()
 				})
 				sjs.keyDown(W_KEY, function () {
-					paddle1.pushUp()
+					paddle11.pushUp()
 				})
 				sjs.keyDown(DOWN_KEY, function () {
-					paddle2.pushDown()
+					paddle21.pushDown()
 				})
 				sjs.keyDown(S_KEY, function () {
-					paddle1.pushDown()
+					paddle11.pushDown()
 				})
-				sjs.onHit("ball", "paddle1", function(ball, paddle) {
-					sjs.bounceOff(ball, paddle1);
+				sjs.onHit("ball", "paddle11", function(ball, paddle) {
+					sjs.bounceOff(ball, paddle11);
 					speed = speed*1.1;
 				})
-				sjs.onHit("ball", "paddle2", function(ball, paddle) {
-					sjs.bounceOff(ball, paddle2);
+				sjs.onHit("ball", "paddle21", function(ball, paddle) {
+					sjs.bounceOff(ball, paddle21);
 					speed = speed*1.1;
 				})
 				sjs.onHit("ball","left_screen", function() {
