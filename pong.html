@@ -218,7 +218,9 @@
 				ball.pushRight(speed);
 				ball.pushUp(speed);
 				setInterval(function() {
-					speed = speed * 1.0000000001
+					speed = 1.000000001*speed;
+					ball.pushUp(0.0000000001*speed)
+					ball.pushRight(0.0000000001*speed)
 				}, 1)
 				//Paddle One
 				var paddle1 = new sjs.Image("pong-ball.png");
