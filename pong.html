@@ -446,8 +446,8 @@
 					if(score1 > 5) {
 					window.location = "gameover1.html";
 					} else { 
-						speed = 5;
-						ball.center();
+						ball.destroy();
+						startNew();
 						if(score1 > 4) {
 							four2.hide()
 							five2.show()
