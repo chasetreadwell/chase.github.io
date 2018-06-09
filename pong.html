@@ -341,15 +341,23 @@
 				//Movement
 				sjs.keyDown(UP_KEY, function () {
 					paddle21.pushUp()
+					paddle22.pushUp()
+					paddle23.pushUp()
 				})
 				sjs.keyDown(W_KEY, function () {
 					paddle11.pushUp()
+					paddle12.pushUp()
+					paddle13.pushUp()
 				})
 				sjs.keyDown(DOWN_KEY, function () {
 					paddle21.pushDown()
+					paddle22.pushDown()
+					paddle23.pushDown()
 				})
 				sjs.keyDown(S_KEY, function () {
 					paddle11.pushDown()
+					paddle12.pushDown()
+					paddle13.pushDown()
 				})
 				sjs.onHit("ball", "paddle11", function(ball, paddle) {
 					sjs.bounceOff(ball, paddle11);
