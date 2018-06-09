@@ -371,17 +371,31 @@
 					paddle12.pushDown()
 					paddle13.pushDown()
 				})
-				sjs.onHit("ball", "paddle1", function(ball, paddle) {
+				sjs.onHit("ball", "paddle11", function(ball, paddle11) {
 					sjs.bounceOff(ball, paddle11);
 					speed = speed*1.1;
 					ball.pushUp(3);
 				})
-				sjs.onHit("ball", "paddle2", function(ball, paddle) {
+				sjs.onHit("ball", "paddle21", function(ball, paddle21) {
 					sjs.bounceOff(ball, paddle21);
 					speed = speed*1.1;
+					ball.pushUp(3);
 				})
-				sjs.onHit("ball", "paddle2", function(ball, paddle) {
-					sjs.bounceOff(ball, paddle21);
+				sjs.onHit("ball", "paddle12", function(ball, paddle12) {
+					sjs.bounceOff(ball, paddle12);
+					speed = speed*1.1;
+				})
+				sjs.onHit("ball", "paddle22", function(ball, paddle22) {
+					sjs.bounceOff(ball, paddle22);
+					speed = speed*1.1;
+				})
+				sjs.onHit("ball", "paddle13", function(ball, paddle13) {
+					sjs.bounceOff(ball, paddle13);
+					speed = speed*1.1;
+					ball.pushDown(3);
+				})
+				sjs.onHit("ball", "paddle23", function(ball, paddle23) {
+					sjs.bounceOff(ball, paddle23);
 					speed = speed*1.1;
 					ball.pushDown(3);
 				})
