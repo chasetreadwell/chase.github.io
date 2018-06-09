@@ -209,19 +209,25 @@
 				line40.centerH();
 				line40.offset(0, 392.5);
 				//Ball goes here
-				var ball = new sjs.Image("pong-ball.png");
-				ball.type = "ball";
-				ball.setSize(15,15);
-				ball.center();
-				ball.friction = 0;
-				ball.bounce();
-				ball.pushRight(speed);
-				ball.pushUp(speed);
-				setInterval(function() {
-					speed = 1.000000001*speed;
-					ball.pushUp(0.0000000001*speed)
-					ball.pushRight(0.0000000001*speed)
-				}, 1)
+				function startNew() {
+					var ball = new sjs.Image("pong-ball.png");
+					ball.type = "ball";
+					speed = 5;
+					ball.setSize(15,15);
+					ball.center();
+					ball.friction = 0;
+					ball.bounce();
+					setTimeout(function() {
+						ball.pushRight(speed);
+						ball.pushUp(speed);
+					}, 1000);
+					setInterval(function() {
+						speed = 1.000000001*speed;
+						ball.pushUp(0.0000000001*speed)
+						ball.pushRight(0.0000000001*speed)
+					}, 1);
+				}
+				startNew();
 				//Paddle One
 				var paddle11 = new sjs.Image("pong-ball.png");
 				paddle11.type = "paddle11";
@@ -371,6 +377,7 @@
 					paddle12.pushDown()
 					paddle13.pushDown()
 				})
+				//bouncing
 				sjs.onHit("ball", "paddle11", function(ball, paddle11) {
 					sjs.bounceOff(ball, paddle11);
 					speed = speed*1.1;
@@ -399,13 +406,15 @@
 					speed = speed*1.1;
 					ball.pushDown(3);
 				})
+				//scoring
 				sjs.onHit("ball","left_screen", function() {
 					score2 = score2 + 1;
 					if(score2 > 5) {
 					window.location = "gameover2.html";
 					} else { 
-						speed = 5;
-						ball.center();
+						
+						ball.destroy();
+						startNew();
 						if(score2 > 4) {
 							four.hide()
 							five.show()
